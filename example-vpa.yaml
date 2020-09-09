@@ -1,0 +1,11 @@
+apiVersion: bindings.rccrdpccl.dev/v1alpha1
+kind: VPABinding
+metadata:
+  name: bind-deploy
+spec:
+  subject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: debug
+---
+# kubectl run debug --image=curlimages/curl:7.72.0 --command=true sleep 3600
